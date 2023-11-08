@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard, Reports, and Stories</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://t3.ftcdn.net/jpg/02/60/08/82/360_F_260088278_GD7xwS1gVVLheT6yNnA3hgtCD1i3hq2n.jpg'); /* Background image URL */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: transparent;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        section {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 10px 0;
+        }
+
+        .left-btns {
+            display: flex;
+        }
+
+        .right-btns {
+            display: flex;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #b72eae; /* Dark green button color */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>IT Sector role and Salaries</h1>
+    </header>
+    <div class="container">
+        <div class="btn-container">
+            <div class="left-btns">
+                <button class="btn" onclick="showDashboard()">Dashboard</button>
+                <button class="btn" onclick="showReports()">Reports</button>
+                <button class="btn" onclick="showStories()">Stories</button>
+            </div>
+            <div class="right-btns">
+                <button class="btn" onclick="showUser()"><i class="fas fa-user"></i> User</button>
+                <button class="btn" onclick="showRegister()"><i class="fas fa-user-plus"></i> Register</button>
+            </div>
+        </div>
+        <section id="dashboard" style="display: none;">
+            <h2>Dashboard</h2>
+            <iframe src="https://us3.ca.analytics.ibm.com/bi/?perspective=dashboard&amp;pathRef=.my_folders%2FIT%2BSECTOR%2FIT%2Bdashboard&amp;closeWindowOnLastView=true&amp;ui_appbar=false&amp;ui_navbar=false&amp;shareMode=embedded&amp;action=view&amp;mode=dashboard&amp;subView=model0000018b759cad25_00000007" width="1000" height="1000" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
+        </section>
+        <section id="reports" style="display: none;">
+            <h2>Reports</h2>
+            <div id="reportContent">
+                <iframe src="https://us3.ca.analytics.ibm.com/bi/?pathRef=.my_folders%2FIT%2BSECTOR%2FNew%2Breport123&amp;closeWindowOnLastView=true&amp;ui_appbar=false&amp;ui_navbar=false&amp;shareMode=embedded&amp;action=run&amp;format=HTML&amp;prompt=false" width="1000" height="1000" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
+            </div>
+        </section>
+        <section id="stories" style="display: none;">
+            <h2>Stories</h2>
+            <iframe src="https://us3.ca.analytics.ibm.com/bi/?perspective=story&amp;pathRef=.my_folders%2FIT%2BSECTOR%2FIT%2BSECTOR%2BSTORY2&amp;closeWindowOnLastView=true&amp;ui_appbar=false&amp;ui_navbar=false&amp;shareMode=embedded&amp;action=view&amp;sceneId=model0000018baf870547_00000007&amp;sceneTime=3950" width="1000" height="1000" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
+                <p>This is the beginning of a story...</p>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; IT Sector role and Salaries</p>
+    </footer>
+    <script>
+        function showDashboard() {
+            document.getElementById("dashboard").style.display = "block";
+            document.getElementById("reports").style.display = "none";
+            document.getElementById("stories").style.display = "none";
+        }
+
+        function showReports() {
+            document.getElementById("dashboard").style.display = "none";
+            document.getElementById("reports").style.display = "block";
+            document.getElementById("stories").style.display = "none";
+        }
+
+        function showStories() {
+            document.getElementById("dashboard").style.display = "none";
+            document.getElementById("reports").style.display = "none";
+            document.getElementById("stories").style.display = "block";
+        }
+
+        function showUser() {
+            // Implement functionality for showing user-related content
+        }
+
+        function showRegister() {
+            // Implement functionality for showing registration-related content
+        }
+    </script>
+</body>
+</html>
